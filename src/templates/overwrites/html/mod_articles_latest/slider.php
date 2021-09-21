@@ -28,8 +28,8 @@ if (!$list)
             $item->jcfields[$jcfield->name] = $jcfield;
         }
     ?>
-	<li class="latestarticleslider__item" itemscope itemtype="https://schema.org/Article">
-        <a href="<?php echo $item->link; ?>" class="latestarticleslider__item-upper">
+	<li class="latestarticleslider__item" itemscope itemtype="https://schema.org/Article" style="background-color:<?php echo $item->jcfields['hintergrundfarbe']->value; ?>;color:<?php echo $item->jcfields['schriftfarbe']->value; ?>">
+        <a href="<?php echo $item->link; ?>" class="latestarticleslider__item-upper" style="color:<?php echo $item->jcfields['schriftfarbe']->value; ?>">
             <h2 itemprop="name" class="latestarticleslider__item-upper-title"><?php echo $item->title; ?></h2>
             <?php
                 $sizes = getimagesize(JURI::base() . json_decode($item->images)->image_intro);
