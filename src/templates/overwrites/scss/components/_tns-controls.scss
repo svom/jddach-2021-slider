@@ -1,0 +1,44 @@
+@include critical(false) {
+  .tns-outer {
+    position: relative;
+  }
+  .tns-controls {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    padding: var(--space-base);
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+    button {
+      appearance: none;
+      border: 1px solid #fff;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      border-radius: 50%;
+      background: transparent;
+      align-items: center;
+      justify-content: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 32px;
+      text-indent: -99999999px;
+      overflow: hidden;
+      background-image: url('../img/arrow.svg');
+      opacity: .5;
+      transition: all .2s ease-in-out;
+      pointer-events: initial;
+      &:hover {
+        opacity: 1;
+      }
+      &:first-child {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
