@@ -15,14 +15,21 @@ if (!$list)
 }
 
 ?>
-<ul class="mod-articleslatest latestnews mod-list">
+<ul class="latestarticleslider">
 <?php foreach ($list as $item) : ?>
-	<li itemscope itemtype="https://schema.org/Article">
-		<a href="<?php echo $item->link; ?>" itemprop="url">
-			<span itemprop="name">
-				<?php echo $item->title; ?>
-			</span>
-		</a>
+	<li class="latestarticleslider__item" itemscope itemtype="https://schema.org/Article">
+        <a href="<?php echo $item->link; ?>" class="latestarticleslider__item-upper">
+            <h2 itemprop="name" class="latestarticleslider__item-upper-title"><?php echo $item->title; ?></h2>
+            <img class="latestarticleslider__item-upper-image" loading="lazy" src="pfad-zum-introbild.jpg" />
+        </a>
+        <div class="latestarticleslider__item-lower">
+            <span class="latestarticleslider__item-lower-client">
+                Kundenname
+            </span>
+            <span class="latestarticleslider__item-lower-client">
+                Projektabschluss-Datum
+            </span>
+        </div>
 	</li>
 <?php endforeach; ?>
 </ul>
