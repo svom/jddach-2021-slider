@@ -38,7 +38,7 @@ if (!$list)
                 <?php echo $item->jcfields['kunde']->value; ?>
             </span>
             <span class="latestarticleslider__item-lower-client">
-                <?php echo $item->jcfields['projektabschluss']->value; ?>
+                <?php echo JFactory::getDate($item->jcfields['projektabschluss']->value)->format('m-Y'); ?>
             </span>
         </div>
 	</li>
