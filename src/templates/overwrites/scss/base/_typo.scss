@@ -5,4 +5,8 @@
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
   }
+  body {
+    font-family: 'Lufga', sans-serif;
+    color: var(--defaultfontcolor);
+  }
 }

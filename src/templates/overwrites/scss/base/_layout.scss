@@ -3,12 +3,6 @@
   html {
     overflow-x: hidden;
   }
-  main {
-    padding: var(--space-base) var(--space-base) 0 var(--space-base);
-    @include lg {
-      padding: var(--space-large) var(--space-large) 0 var(--space-large);
-    }
-  }
   .contentsection {
     padding: var(--space-xlarge) 0;
     @include lg {

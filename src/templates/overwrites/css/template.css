@@ -1,1 +1,1 @@
-:root{--spaceunit:8px;--space-xlarge:calc(var(--spaceunit) * 6);--space-large:calc(var(--spaceunit) * 4);--space-base:calc(var(--spaceunit) * 2.5);--space-small:calc(var(--spaceunit) * 1)}
+:root{--defaultfontcolor:#666}:root{--spaceunit:8px;--space-xlarge:calc(var(--spaceunit) * 6);--space-large:calc(var(--spaceunit) * 4);--space-base:calc(var(--spaceunit) * 2.5);--space-small:calc(var(--spaceunit) * 1)}

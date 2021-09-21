@@ -1,0 +1,54 @@
+@include critical(true) {
+  .latestarticleslider {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+      background: #4d4c4c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      padding: var(--space-large);
+      &-upper {
+        width: 100%;
+        height: calc(100% - 2rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &-title {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          text-align: center;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 3rem;
+          margin: 0;
+        }
+        &-image {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+      &-lower {
+        display: flex;
+        font-size: .85rem;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1rem;
+        width: 100%;
+        text-transform: uppercase;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}

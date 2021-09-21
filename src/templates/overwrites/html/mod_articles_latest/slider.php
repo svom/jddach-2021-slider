@@ -34,7 +34,7 @@ if (!$list)
             <?php
                 $sizes = getimagesize(JURI::base() . json_decode($item->images)->image_intro);
             ?>
-            <img class="latestnewsslider__image" loading="lazy" width="<?php echo $sizes[0]; ?>" height="<?php echo $sizes[1]; ?>" src="<?php echo json_decode($item->images)->image_intro;?>" />
+            <img class="latestarticleslider__item-upper-image" loading="lazy" width="<?php echo $sizes[0]; ?>" height="<?php echo $sizes[1]; ?>" src="<?php echo json_decode($item->images)->image_intro;?>" />
         </a>
         <div class="latestarticleslider__item-lower">
             <span class="latestarticleslider__item-lower-client">
