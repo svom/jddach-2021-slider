@@ -1,0 +1,102 @@
+@include critical(true) {
+  // Grid Utilities
+  .grid {
+    display: grid;
+    grid-gap: var(--space-base);
+    &--col2 {
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    &--col1-2 {
+      @include md {
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+    &--col2-1 {
+      @include md {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+    &--col3 {
+      @include md {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    &--col4 {
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include lg {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    &--col6 {
+      @include lg {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include xl {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+    &--gtbase {
+      grid-gap: var(--space-base);
+    }
+    &--gtlarge {
+      grid-gap: var(--space-xlarge);
+    }
+    &--gtcollapse {
+      grid-gap: 0;
+    }
+  }
+
+  // Utility-Classes (Layout)
+  .min-md {
+    display: none;
+    @include md {
+      display: block;
+    }
+  }
+  .min-lg {
+    display: none;
+    @include lg {
+      display: block;
+    }
+  }
+  .min-xl {
+    display: none !important;
+    @include xl {
+      display: inline-block !important;
+    }
+  }
+  .min-xxl {
+    display: none;
+    @include xxl {
+      display: block;
+    }
+  }
+  .max-sm {
+    display: block;
+    @include md {
+      display: none !important;
+    }
+  }
+  .max-md {
+    display: block;
+    @include lg {
+      display: none !important;
+    }
+  }
+  .max-lg {
+    display: block;
+    @include xl {
+      display: none !important;
+    }
+  }
+  .max-xl {
+    display: block;
+    @include xxl {
+      display: none !important;
+    }
+  }
+}

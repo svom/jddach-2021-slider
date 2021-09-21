@@ -1,0 +1,83 @@
+@include critical(true) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  main {
+    padding: var(--space-base) var(--space-base) 0 var(--space-base);
+    @include lg {
+      padding: var(--space-large) var(--space-large) 0 var(--space-large);
+    }
+  }
+  .contentsection {
+    padding: var(--space-xlarge) 0;
+    @include lg {
+      padding: calc(var(--space-xlarge) * 2) 0;
+    }
+  }
+  .contentcontainer {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .textcontainer {
+    max-width: 800px;
+    margin: 80px auto var(--space-xlarge) auto;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  // Colors
+  .bg-primary {
+    background: var(--primary);
+    position: relative;
+    .sectionheading {
+      color: var(--headingcolor);
+      mix-blend-mode: multiply;
+    }
+    &:before,
+    &:after {
+      background: var(--primary);
+      position: absolute;
+      height: 100%;
+      width: var(--space-base);
+      top: 0;
+      left: 100%;
+      content: " ";
+      display: block;
+      @include lg {
+        width: var(--space-large);
+      }
+    }
+    &:after {
+      right: 100%;
+      left: unset;
+    }
+  }
+  .bg-muted {
+    background: var(--muted);
+    position: relative;
+    .sectionheading {
+      color: var(--headingcolor);
+      mix-blend-mode: multiply;
+    }
+    &:before,
+    &:after {
+      background: var(--muted);
+      position: absolute;
+      height: 100%;
+      width: var(--space-base);
+      top: 0;
+      left: 100%;
+      content: " ";
+      display: block;
+      @include lg {
+        width: var(--space-large);
+      }
+    }
+    &:after {
+      right: 100%;
+      left: unset;
+    }
+  }
+}

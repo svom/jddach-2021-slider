@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="3.0.0">
+	<name>JoomlaDay DACH 2021</name>
+	<version>1.0.0</version>
+	<description>Joomla!-Template for JoomlaDay DACH 2021</description>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<author>Lukas Jardin</author>
+	<authoremail>l.jardin@djumla.de</authoremail>
+	<copyright>Copyright (C) 2021 djumla GmbH. All rights reserved.</copyright>
+	<creationDate>01-Sep-2021</creationDate>
+	<files>
+		<folder>css</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>scss</folder>
+		<folder>font</folder>
+		<folder>html</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>template_preview.png</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+	</files>
+	<positions>
+		<position>content_top</position>
+		<position>content_bottom</position>
+	</positions>
+</extension>
