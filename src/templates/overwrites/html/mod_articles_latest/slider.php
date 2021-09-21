@@ -12,13 +12,16 @@ defined('_JEXEC') or die;
 // Load FieldsHelper
 JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
 
+// Generate Random-ID to create unique identifier for Tiny-Slider-Setup
+$randomId = substr(md5(uniqid()), 0, 12);;
+
 if (!$list)
 {
 	return;
 }
 
 ?>
-<ul class="latestarticleslider">
+<div class="latestarticleslider" id="latestarticleslider-<?php echo $randomId; ?>">
 <?php foreach ($list as $item) : ?>
     <?php
         $item->jcfields = FieldsHelper::getFields('com_content.article', $item, true);
@@ -28,7 +31,7 @@ if (!$list)
             $item->jcfields[$jcfield->name] = $jcfield;
         }
     ?>
-	<li class="latestarticleslider__item" itemscope itemtype="https://schema.org/Article" style="background-color:<?php echo $item->jcfields['hintergrundfarbe']->value; ?>;color:<?php echo $item->jcfields['schriftfarbe']->value; ?>">
+	<div class="latestarticleslider__item" itemscope itemtype="https://schema.org/Article" style="background-color:<?php echo $item->jcfields['hintergrundfarbe']->value; ?>;color:<?php echo $item->jcfields['schriftfarbe']->value; ?>">
         <a href="<?php echo $item->link; ?>" class="latestarticleslider__item-upper" style="color:<?php echo $item->jcfields['schriftfarbe']->value; ?>">
             <h2 itemprop="name" class="latestarticleslider__item-upper-title"><?php echo $item->title; ?></h2>
             <?php
@@ -44,6 +47,23 @@ if (!$list)
                 <?php echo JFactory::getDate($item->jcfields['projektabschluss']->value)->format('m-Y'); ?>
             </span>
         </div>
-	</li>
+	</div>
 <?php endforeach; ?>
-</ul>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    tns({
+      container: '#latestarticleslider-<?php echo $randomId; ?>',
+      items: 1,
+      slideBy: 1,
+      autoplay: false,
+      loop: true,
+      nav: false,
+      mouseDrag: true,
+      controls: true,
+      rewind: false,
+      speed: 500,
+      mode: 'gallery'
+    });
+  });
+</script>
