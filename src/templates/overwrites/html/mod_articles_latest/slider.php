@@ -22,12 +22,12 @@ if (!$list)
 <?php foreach ($list as $item) : ?>
     // Register Fields
     <?php
-    $item->jcfields = FieldsHelper::getFields('com_content.article', $item, true);
+        $item->jcfields = FieldsHelper::getFields('com_content.article', $item, true);
 
-    foreach($item->jcfields as $jcfield)
-    {
-        $item->jcfields[$jcfield->name] = $jcfield;
-    }
+        foreach($item->jcfields as $jcfield)
+        {
+            $item->jcfields[$jcfield->name] = $jcfield;
+        }
     ?>
 	<li class="latestarticleslider__item" itemscope itemtype="https://schema.org/Article">
         <a href="<?php echo $item->link; ?>" class="latestarticleslider__item-upper">
