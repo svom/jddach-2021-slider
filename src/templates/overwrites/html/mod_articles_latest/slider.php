@@ -9,6 +9,9 @@
 
 defined('_JEXEC') or die;
 
+// Load FieldsHelper
+JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
+
 if (!$list)
 {
 	return;
@@ -17,6 +20,11 @@ if (!$list)
 ?>
 <ul class="latestarticleslider">
 <?php foreach ($list as $item) : ?>
+    // Register Fields
+    <?php
+        $item->jcfields = FieldsHelper::getFields('com_content.article', $item, true);
+    ?>
+    <?php var_dump($item->jcfields); ?>
 	<li class="latestarticleslider__item" itemscope itemtype="https://schema.org/Article">
         <a href="<?php echo $item->link; ?>" class="latestarticleslider__item-upper">
             <h2 itemprop="name" class="latestarticleslider__item-upper-title"><?php echo $item->title; ?></h2>
