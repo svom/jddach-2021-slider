@@ -62,7 +62,7 @@ if (!$list)
       mouseDrag: true,
       controls: true,
       rewind: false,
-      speed: 500,
+      speed: 1000,
       mode: 'gallery'
     });
   });
