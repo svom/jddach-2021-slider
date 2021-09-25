@@ -17,7 +17,7 @@ Linksammlung
 Präsentation:
 https://www.figma.com/proto/sohlRQ89s4nakQgikpxI08/Vortrag-JDDACH-2021?page-id=0%3A1&node-id=1%3A3&viewport=241%2C48%2C0.25&scaling=contain
 
--
+----
 
 Kleiner Helferlein:
 
