@@ -8,4 +8,4 @@ Tiny Slider 2 - https://github.com/ganlanyuan/tiny-slider
 Library used for Scroll-Animations:
 AOS - https://michalsnik.github.io/aos/
 
-If you have any questions regarding specific code-samples feel free to contact me everytime.
+If you have any questions regarding specific code-samples feel free to contact me everytime: mail@lukasjardin.de
